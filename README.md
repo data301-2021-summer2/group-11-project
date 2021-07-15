@@ -38,4 +38,5 @@ There are 198 row entries per area or aggregate listings, 12 columns for a total
 ## References
 
 [MLS Home Price Index (HPI) CREA.](https://www.crea.ca/housing-market-stats/mls-home-price-index/)
+
 [MLS Home Price Index (HPI) Methodology](https://www.crea.ca/wp-content/uploads/2019/06/HPI_Methodology-1.pdf)
