@@ -15,13 +15,17 @@ Consequently, there is concern a market crash could be imminent. Recent property
 ## Describe your dataset in about 150-200 words
 
 # General Info
+
 Our dataset is provided by MLS (Multiple Listing Services) Database which includes data from multiple real estate brokers. The data contains both seasonally-adjusted and non-seasonally adjusted, monthly entries from January 2005 to May 2021, of the average sale price,  for these dwellings types: 
+
 - Single Family
 - One Storey
 - Two Storey
 - Townhouse
 - Apartment 
-# Size of dataset
+
+# Size of Dataset
+
 The dataset includes aggregate data for all areas across Canada and specific cities including Victoria, Greater Vancouver, Okanagan Valley, etc. 
 There are 198 row entries per area or aggregate listings, 12 columns for a total of 2,376 datapoints per area. Additionally, Stat Canada has monthly Consumer Price Index values for the same monthly-periods, adding an additional 198 records for 2574 per area. This project focus is on Okanagan Valley and Greater Vancouver, this totals to 5,148 records.
 
