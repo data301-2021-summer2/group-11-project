@@ -1,6 +1,6 @@
-# Group YYY - {Short snappy Title of your project}
+# **Group 11 - When will the bubble burst?**
 
-- When will the bubble burst?
+- A very introductory analysis of the Canadian Housing Market to see if we can predict when the housing bubble might crash.
 
 ## Milestones
 
@@ -16,9 +16,9 @@ Details for Milestone are available on Canvas (left sidebar, Course Project) or 
 
 ## Team Members
 
-- Person 1: one sentence about you!
+- Wesley Burchnall: one sentence about you!
 - Andy McLean: My cat is plotting to kill me!!
-- Person 3: one sentence about you!
+- Abirinder Brar: one sentence about you!
 
 ## References
 
