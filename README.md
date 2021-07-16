@@ -33,7 +33,7 @@ There are 198 row entries per area or aggregate listings, 12 columns for a total
 
 - Wesley Burchnall: I've worked full time as a security guard throughout all four years of university and maintained an 80%+ average. The secret? Drink enough Diet Pepsi in a day to probably kill a small animal to stay awake! It'll only take years off the end of your life and those are the bad years anyways! 
 - Andy McLean: I am a third year Electrical enginnering student trying to get a minor in Computer Science. I have been locked up for over a year going to school online and I believe my cat is plotting to kill me in  my sleep!!
-- Abirinder Brar: one sentence about you!
+- Abirinder Brar: I am a third year Elec Engineering student like Andy above with a business diploma from OK College. I have a wife, a 22 month old son and another baby on the way. It is believed that Andy's cat is also plotting to get me after him. 
 
 ## References
 
