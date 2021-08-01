@@ -86,7 +86,6 @@ def load_and_process():
 def limitYears(aDF, backXYears):
     #PresupposesDF is already sorted
     return aDF.iloc[:, aDF.shape[1]-backXYears:aDF.shape[1]-1]
-<<<<<<< HEAD
 def printStatTableByDecade(aDF, areaOfInterest):
     #This function prints a statistical table
     #Establishing column name list for various decades
@@ -99,12 +98,9 @@ def printStatTableByDecade(aDF, areaOfInterest):
 
     #Choosing area of interest to collect data for
     statData = {}
-
     for key in decades.keys():
         statData[key] = [aDF[decades[key]].loc[areaOfInterest].mean(),aDF[decades[key]].loc[areaOfInterest].min(),aDF[decades[key]].loc[areaOfInterest].max()]
-=======
->>>>>>> 3b11170b488734bdd5d72faaa667228f72d89904
-
+        
     #Table Print
     TableHeader = "A Summary of Stats " + areaOfInterest + " By Decades in Tabular Form"
     print(TableHeader)
