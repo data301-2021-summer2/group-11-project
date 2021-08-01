@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
+sns.set_theme(style="darkgrid",font_scale=1.2)
+
 #Loading and Wrangling individual dataframes
 def loadStatCanCPI():
     StatCanCPI = pd.read_csv('./../../data/processed/preprocessed/Stat_Can_CPI_1985_to_Now.csv')
@@ -83,5 +85,35 @@ def load_and_process():
     return masterDF
 def limitYears(aDF, backXYears):
     #PresupposesDF is already sorted
-    return aDF.iloc[:, masterDF.shape[1]-backXYears:masterDF.shape[1]-1]
+    return aDF.iloc[:, aDF.shape[1]-backXYears:aDF.shape[1]-1]
+def printStatTableByDecade(aDF, areaOfInterest):
+    #This function prints a statistical table
+    #Establishing column name list for various decades
+    The80s = [col for col in aDF.columns if '198' in col]
+    The90s = [col for col in aDF.columns if '199' in col]
+    The00s = [col for col in aDF.columns if '200' in col]
+    The10s = [col for col in aDF.columns if '201' in col]
+    The20s = [col for col in aDF.columns if '202' in col]
+    decades = {'80s' : The80s, '90s' :The90s, '00s' :The00s, '10s' :The10s, '20s' :The20s}
 
+    #Choosing area of interest to collect data for
+    statData = {}
+
+    for key in decades.keys():
+        statData[key] = [aDF[decades[key]].loc[areaOfInterest].mean(),aDF[decades[key]].loc[areaOfInterest].min(),aDF[decades[key]].loc[areaOfInterest].max()]
+
+    #Table Print
+    TableHeader = "A Summary of Stats " + areaOfInterest + " By Decades in Tabular Form"
+    print(TableHeader)
+    print("-"*len(TableHeader))
+    print("Decade | Mean\t |  Min\t |  Max\t |")
+    for key in statData.keys():
+        print(key + "    | " + str(statData[key][0])[0:4] + "\t | " + str(statData[key][1])[0:4] + "\t | " + str(statData[key][2])[0:4] + "\t |")
+def relPlotOverTime(aDF,areaOfInterest,years,sizex, sizey):
+    sns.set(rc={"figure.figsize":(sizex, sizey)})
+    sns.relplot(x=limitYears(aDF,years).columns, y=areaOfInterest, data=limitYears(aDF,years).transpose()).set(title="Relational Plot of " + areaOfInterest + " from years " + limitYears(aDF,years).columns.min() + " to " + limitYears(aDF,years).columns.max())
+    plt.title = "You suck Andy. Ballllllss."
+def scatterPlotOverTime(aDF,areaOfInterest,years,sizex, sizey):
+    sns.set(rc={"figure.figsize":(sizex, sizey)})
+    sns.scatterplot(x=limitYears(aDF,years).columns, y=areaOfInterest, data=limitYears(aDF,years).transpose()).set(title="Scatter Plot of " + areaOfInterest + " from years " + limitYears(aDF,years).columns.min() + " to " + limitYears(aDF,years).columns.max())
+    
