@@ -83,5 +83,5 @@ def load_and_process():
     return masterDF
 def limitYears(aDF, backXYears):
     #PresupposesDF is already sorted
-    return aDF.iloc[:, masterDF.shape[1]-backXYears:masterDF.shape[1]-1]
+    return aDF.iloc[:, aDF.shape[1]-backXYears:aDF.shape[1]-1]
 
