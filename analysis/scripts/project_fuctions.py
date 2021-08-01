@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-sns.set_theme(style="darkgrid",font_scale=1.2)
+sns.set_theme(style="darkgrid",font_scale=0.7)
 
 #Loading and Wrangling individual dataframes
 def loadStatCanCPI():
@@ -105,9 +105,9 @@ def printStatTableByDecade(aDF, areaOfInterest):
     TableHeader = "A Summary of Stats " + areaOfInterest + " By Decades in Tabular Form"
     print(TableHeader)
     print("-"*len(TableHeader))
-    print("Decade | Mean\t |  Min\t |  Max\t |")
+    print("Decade | Mean\t |  Min   |  Max |")
     for key in statData.keys():
-        print(key + "    | " + str(statData[key][0])[0:4] + "\t | " + str(statData[key][1])[0:4] + "\t | " + str(statData[key][2])[0:4] + "\t |")
+        print(key + "    | " + str(round(statData[key][0],3)) + "\t | " + str(round(statData[key][1],3)) + "\t | " + str(round(statData[key][2],3)) + " |")
 def relPlotOverTime(aDF,areaOfInterest,years,sizex, sizey):
     sns.set(rc={"figure.figsize":(sizex, sizey)})
     sns.relplot(x=limitYears(aDF,years).columns, y=areaOfInterest, data=limitYears(aDF,years).transpose()).set(title="Relational Plot of " + areaOfInterest + " from years " + limitYears(aDF,years).columns.min() + " to " + limitYears(aDF,years).columns.max())
@@ -115,4 +115,7 @@ def relPlotOverTime(aDF,areaOfInterest,years,sizex, sizey):
 def scatterPlotOverTime(aDF,areaOfInterest,years,sizex, sizey):
     sns.set(rc={"figure.figsize":(sizex, sizey)})
     sns.scatterplot(x=limitYears(aDF,years).columns, y=areaOfInterest, data=limitYears(aDF,years).transpose()).set(title="Scatter Plot of " + areaOfInterest + " from years " + limitYears(aDF,years).columns.min() + " to " + limitYears(aDF,years).columns.max())
-    
+def barPlotOverTime(aDF,areaOfInterest,years,sizex,sizey, color):
+    sns.barplot(data=limitYears(aDF,years).transpose(), x=limitYears(aDF,years).columns, y=areaOfInterest, color=color).set(title="Scatter Plot of " + areaOfInterest + " from years " + limitYears(aDF,years).columns.min() + " to " + limitYears(aDF,years).columns.max())
+    sns.despine()
+    sns.set(rc={"figure.figsize":(sizex, sizey)})
