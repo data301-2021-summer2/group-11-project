@@ -81,4 +81,7 @@ def load_and_process():
     #Merging StatCanCPI, StatCanBCHPI, CanadaPIR and WorldBankData all are wrangled into yearly sets.
     masterDF = ourData[0].append(ourData[3].append(ourData[1].append(ourData[2]))).sort_index(axis=1).convert_dtypes(int)
     return masterDF
+def limitYears(aDF, backXYears):
+    #PresupposesDF is already sorted
+    return aDF.iloc[:, masterDF.shape[1]-backXYears:masterDF.shape[1]-1]
 
