@@ -119,3 +119,39 @@ def barPlotOverTime(aDF,areaOfInterest,years,sizex,sizey, color):
     sns.barplot(data=limitYears(aDF,years).transpose(), x=limitYears(aDF,years).columns, y=areaOfInterest, color=color).set(title="Scatter Plot of " + areaOfInterest + " from years " + limitYears(aDF,years).columns.min() + " to " + limitYears(aDF,years).columns.max())
     sns.despine()
     sns.set(rc={"figure.figsize":(sizex, sizey)})
+def multiScatterPlot(aDF, locations, color, title):
+    fig, ax = plt.subplots()
+    plt.title(title,size=20)
+
+    ax2=[]
+    sns.scatterplot(x=aDF.index, y=locations[0], data=aDF, ax=ax, color=color[0], label=locations[0])
+    print(range(len(locations)))
+    for i in range(len(locations)):
+        if not (i==0):
+            ax2.append(ax.twinx())
+            sns.scatterplot(x=aDF.index, y=locations[i], data=aDF, ax=ax2[i-1], color=color[i], label=locations[i])
+        
+
+
+    lines = [None]*(len(ax2)+1)
+    labels = [None]*(len(ax2)+1)
+    lines[0], labels[0] = ax.get_legend_handles_labels()
+    for i in range(len(ax2)):
+        lines[i+1], labels[i+1] = ax2[i].get_legend_handles_labels()
+
+    line_pass = lines[0]
+    labels_pass = labels[0]
+
+
+    for i in range(len(labels)):
+        if not (i==0):
+            line_pass = line_pass +  lines[i]
+            labels_pass = labels_pass + labels[i]
+    
+    ax2[len(ax2) - 1].legend(line_pass, labels_pass, loc='upper left',fontsize='20')
+
+    ax.axes.get_yaxis().set_visible(False)
+    for i in range(len(ax2)):
+        ax2[i].axes.get_yaxis().set_visible(False)
+
+    plt.show()
