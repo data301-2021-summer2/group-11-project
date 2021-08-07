@@ -238,3 +238,11 @@ def multiScatterPlot(aDF, locations, color, title):
         ax2[i].axes.get_yaxis().set_visible(False)
 
     plt.show()
+
+def sideBySideScatterPlot(aDF,columns, title):
+    fig, axs = plt.subplots(ncols=len(columns))
+    plt.title(title,size=20)
+    fig.set_figwidth(30)
+    fig.set_figheight(15)
+    for location in range(len(columns)):
+        sns.scatterplot(y=aDF[columns[location-1]],x=aDF.index,data=aDF,ax=axs[location-1])
