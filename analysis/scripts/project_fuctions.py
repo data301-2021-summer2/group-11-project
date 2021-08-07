@@ -6,18 +6,31 @@ import numpy as np
 
 sns.set_theme(style="darkgrid",font_scale=0.7)
 
-#Loading and Wrangling individual dataframes
+#Function loads Statistics Canada Consumer Price Index Data via method-chaining. Little processing is required on this dataset.
 def loadStatCanCPI():
-    StatCanCPI = pd.read_csv('./../../data/processed/preprocessed/Stat_Can_CPI_1985_to_Now.csv')
-    StatCanCPI = StatCanCPI.set_index('Products and product groups 4')
+    StatCanCPI = (
+        pd.read_csv(
+            './../../data/processed/preprocessed/Stat_Can_CPI_1985_to_Now.csv'
+        )
+        .set_index('Products and product groups 4')
+    )
     return StatCanCPI
+
+#Function loads Statistics Canada British Columbia Housing Price Index Data
 def loadStatCanBCHPIData():
-    StatCanBCHPI = pd.read_csv('./../../data/processed/preprocessed/Stat_Can_HPI_BC-only_1986_to_2021_May.csv')
-    StatCanBCHPI = StatCanBCHPI.drop(index=[1,2],axis=0)
-    #Finds just columsn with January in the name
+    #Method Chain
+    StatCanBCHPI = (
+        pd.read_csv(
+            './../../data/processed/preprocessed/Stat_Can_HPI_BC-only_1986_to_2021_May.csv'
+        )
+        .drop(index=[1,2],axis=0)
+    )
+    
+    #Finds just columns with January in the name
     colWithJan = [col for col in StatCanBCHPI.columns if 'Jan' in col]
     colUpdated = []
-    #Maps column name from two-formats in dataset (pre-01 and 01 onward) to standard year-format
+    
+    #Maps column name from two-formats in dataset (pre-01 and 01 onward) to standard year-format to match other DF.
     for x in range(len(colWithJan)):
         if colWithJan[x][4:6] != "an":
             if (int(colWithJan[x][4:6])) > 80:
@@ -25,67 +38,125 @@ def loadStatCanBCHPIData():
             elif int(colWithJan[x][4:6]) == 0:
                 colUpdated.append("20" + colWithJan[x][4:6]) 
         else: colUpdated.append("20" + colWithJan[x][0:2])
-    #replacing jan colum names with mapped names and dropping rest of columns
-    StatCanBCHPI = StatCanBCHPI[colWithJan].set_axis(colUpdated, axis='columns')
-    #Chanaging row access to name which better represents data
-    StatCanBCHPI = StatCanBCHPI.set_axis(['BC New Housing Price Index'], axis='index')
+            
+    #Method Chain
+    #Dropping unused columns, applying column name update made in for loop above and renaming axis.
+    StatCanBCHPI = (
+        StatCanBCHPI[colWithJan].copy(deep=False)
+        .set_axis(colUpdated, axis='columns')
+        .set_axis(['BC New Housing Price Index'], axis='index')
+    )
+    
     return StatCanBCHPI
+
+#Function loads Statistics Canada Canada-wide Housing Price Index Data
 def loadStatCanCanadaHPIData():
-    StatCanCanadaHPI = pd.read_csv('./../../data/processed/preprocessed/Stat_Can_HPI_Canada_1981_to_2021_May.csv')
+    StatCanCanadaHPI = (
+        pd.read_csv(
+        './../../data/processed/preprocessed/Stat_Can_HPI_Canada_1981_to_2021_May.csv'
+        )
+    )
     return StatCanCanadaHPI
+
+#Function loads Statistics Canada Prime Interest Rate Data
 def loadCanadaPrimeInterestRate():
-    CanadaPIR = pd.read_csv('./../../data/processed/preprocessed/Canada-Prime-Rate-History.csv')
-    #Transposing data to place column names as dates
-    CanadaPIR = CanadaPIR.transpose()
+    #Method chaining
+    CanadaPIR = (
+        pd.read_csv(
+            './../../data/processed/preprocessed/Canada-Prime-Rate-History.csv'
+        )
+        #Transposing data to place column names as dates
+        .transpose()
+    )
+    
+    #After much effort, .columns cannot reference CanadaPIR before it is established so had to end-chain to run following command
     CanadaPIR.columns = CanadaPIR.iloc[0]
-    CanadaPIR.drop(index=CanadaPIR.index[0], axis=0, inplace=True)
-    #Finds just columsn with January in the name
+    CanadaPIR.drop(index = CanadaPIR.index[0], axis=0, inplace=True)
+    
+    #Finds just columns with str 'Jan' in the name to select January months
     colWithJan = [col for col in CanadaPIR.columns if 'Jan' in col]
     colUpdated = []
-    #Maps column name from in dataset to standard year-format
+    
+    #Maps column name from in dataset to standard year-format to match other DF.
     for x in range(len(colWithJan)):
         if (int(colWithJan[x][4:6])) > 80:
              colUpdated.append("19"+ colWithJan[x][4:6])
         elif int(colWithJan[x][4:6]) == 0 or int(colWithJan[x][4:6]) > 0:
             colUpdated.append("20" + colWithJan[x][4:6]) 
-    #replacing jan colum names with mapped names and dropping rest of columns
-    CanadaPIR = CanadaPIR[colWithJan].set_axis(colUpdated, axis='columns')
+              
+    #Method Chain
+    #Dropping unused columns, applying column name update made in for loop above.
+    CanadaPIR = (
+        CanadaPIR[colWithJan].copy(deep=False)
+        .set_axis(colUpdated, axis='columns')
+    )
+    
     return CanadaPIR
-def loadMLSRegionalHPIData():
-    MLSHPIData = pd.read_excel('./../../data/processed/preprocessed/MLS HPI - Seasonally Adjusted.xlsx',sheet_name=['AGGREGATE', 'OKANAGAN_VALLEY','GREATER_VANCOUVER'], usecols=['Date', 'One_Storey_Benchmark_SA', 'Two_Storey_Benchmark_SA', 'Townhouse_Benchmark_SA', 'Apartment_Benchmark_SA'])
+
+def loadMLSRegionalHPIData(): 
+    #Method Chaining
+    MLSHPIData = (
+        pd.read_excel(
+            './../../data/processed/preprocessed/MLS HPI - Seasonally Adjusted.xlsx',
+            sheet_name=['AGGREGATE', 'OKANAGAN_VALLEY','GREATER_VANCOUVER'], 
+            usecols=['Date', 'One_Storey_Benchmark_SA', 'Two_Storey_Benchmark_SA', 'Townhouse_Benchmark_SA', 'Apartment_Benchmark_SA']
+        )
+    )
+    
     #Updating Keys for clarity/redability and alignment to research question
     MLSHPIData['Vancouver'] = MLSHPIData.pop('GREATER_VANCOUVER')
     MLSHPIData['Kelowna'] = MLSHPIData.pop('OKANAGAN_VALLEY')
     MLSHPIData['Canada'] = MLSHPIData.pop('AGGREGATE')
+      
     #Cycling through keys and creating list for changing colums to add regional information, then setting horizontal index to be date in each key-value pair, then replacing column-names with new list
     for key in MLSHPIData.keys():
         colRenameInfo=[key + " " + 'One Storey Home', key + " " + 'Two Storey Home', key + " "  + 'Townhouse', key + " " + 'Apartment']
         MLSHPIData[key].set_index('Date',inplace=True)
         MLSHPIData[key].set_axis(colRenameInfo,axis='columns',inplace=True)
+    
     #Joining all three regions together into one single dataframe
     return MLSHPIData['Vancouver'].join(MLSHPIData['Kelowna'].join(MLSHPIData['Canada']))
+
+#Function loads World Bank Data for Canada regarding Economic Progress Indicators
 def loadWorldBankData():
-    WorldBankData = pd.read_csv('./../../data/processed/preprocessed/World Bank Data - Indicators.csv')
-    WorldBankData = WorldBankData.set_index('Year')
+    #Method Chain
+    WorldBankData = ( 
+        pd.read_csv(
+            './../../data/processed/preprocessed/World Bank Data - Indicators.csv'
+        )
+        .set_index('Year')
+    )
+        
+    
     #WorldBankData.drop(index=WorldBankData.index[1], axis=0, inplace=True)
     return WorldBankData
 
 def loadAll():
+    #Loading individual datasets
     StatCanCPI = loadStatCanCPI()
     StatCanBCHPI = loadStatCanBCHPIData()
     StatCanCanadaHPI = loadStatCanCanadaHPIData()
     CanadaPIR = loadCanadaPrimeInterestRate()
     WorldBankData = loadWorldBankData()
+
+    #Creating single returnable from function by generating list
     dataFrames = [StatCanCPI, StatCanBCHPI, CanadaPIR, WorldBankData]
     return dataFrames
+
+#Required function_name according to task document
 def load_and_process():
     ourData = loadAll()
-    #Merging StatCanCPI, StatCanBCHPI, CanadaPIR and WorldBankData all are wrangled into yearly sets.
+    #Merging StatCanCPI, StatCanBCHPI, CanadaPIR and WorldBankData all are pre-wrangled into yearly sets.
     masterDF = ourData[0].append(ourData[3].append(ourData[1].append(ourData[2]))).sort_index(axis=1).convert_dtypes(int)
     return masterDF
+
+#Function takes a dataset and returns a smaller subset of data containing a specific passable number of years from present date.
+#This allows less-data for smaller analysis of specific periods of time (easier to see short trends/changes)
 def limitYears(aDF, backXYears):
     #PresupposesDF is already sorted
     return aDF.iloc[:, aDF.shape[1]-backXYears:aDF.shape[1]-1]
+
+#Stat Printing Table
 def printStatTableByDecade(aDF, areaOfInterest):
     #This function prints a statistical table
     #Establishing column name list for various decades
@@ -108,17 +179,29 @@ def printStatTableByDecade(aDF, areaOfInterest):
     print("Decade | Mean\t |  Min   |  Max |")
     for key in statData.keys():
         print(key + "    | " + str(round(statData[key][0],3)) + "\t | " + str(round(statData[key][1],3)) + "\t | " + str(round(statData[key][2],3)) + " |")
+
+#Performs a relational plot over a specific period of time from current date.
+#Passable arguments are a dataframe to plot from, what column to plot, how many years to plot backwards from current date, size in x and y directions.
 def relPlotOverTime(aDF,areaOfInterest,years,sizex, sizey):
     sns.set(rc={"figure.figsize":(sizex, sizey)})
     sns.relplot(x=limitYears(aDF,years).columns, y=areaOfInterest, data=limitYears(aDF,years).transpose()).set(title="Relational Plot of " + areaOfInterest + " from years " + limitYears(aDF,years).columns.min() + " to " + limitYears(aDF,years).columns.max())
     plt.title = "You suck Andy. Ballllllss."
+
+#Performs a scatter plot over a specific period of time from current date.
+#Passable arguments are a dataframe to plot from, what column to plot, how many years to plot backwards from current date, size in x and y directions.
 def scatterPlotOverTime(aDF,areaOfInterest,years,sizex, sizey):
     sns.set(rc={"figure.figsize":(sizex, sizey)})
     sns.scatterplot(x=limitYears(aDF,years).columns, y=areaOfInterest, data=limitYears(aDF,years).transpose()).set(title="Scatter Plot of " + areaOfInterest + " from years " + limitYears(aDF,years).columns.min() + " to " + limitYears(aDF,years).columns.max())
+
+#Performs a bar plot over a specific period of time from current date.
+#Passable arguments are a dataframe to plot from, what column to plot, how many years to plot backwards from current date, size in x and y directions, and color.
 def barPlotOverTime(aDF,areaOfInterest,years,sizex,sizey, color):
     sns.barplot(data=limitYears(aDF,years).transpose(), x=limitYears(aDF,years).columns, y=areaOfInterest, color=color).set(title="Scatter Plot of " + areaOfInterest + " from years " + limitYears(aDF,years).columns.min() + " to " + limitYears(aDF,years).columns.max())
     sns.despine()
     sns.set(rc={"figure.figsize":(sizex, sizey)})
+
+#Performs a multiple-series scatter plot over a specific period of time from current date.
+#Passable arguments are a dataframe to plot from, what columns to plot, the color of the plot and a plot title.
 def multiScatterPlot(aDF, locations, color, title):
     fig, ax = plt.subplots()
     plt.title(title,size=20)
