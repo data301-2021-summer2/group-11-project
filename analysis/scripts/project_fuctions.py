@@ -1,4 +1,16 @@
-#imports
+##############******Shared Project Functions******##############
+#**************************************************************#
+#              1. Section 1 - Imported Libraries               #
+#              2. Section 2 - Data Wrangling and processing    #
+#              3. Section 3 - On-demand Wrangling Functions    #
+#              4. Section 4 - Statistical Analysis Functions   #
+#              5. Section 5 - Graphing functions               #
+#**************************************************************#
+
+
+
+#                 Section 1 - Imported Libraries               #
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -6,8 +18,13 @@ import numpy as np
 
 sns.set_theme(style="darkgrid",font_scale=0.7)
 
+
+
+#                 Section 2 - Data Wrangling and processing    #
+
 #Function loads Statistics Canada Consumer Price Index Data via method-chaining. Little processing is required on this dataset.
 def loadStatCanCPI():
+    #Method Chain
     StatCanCPI = (
         pd.read_csv(
             './../../data/processed/preprocessed/Stat_Can_CPI_1985_to_Now.csv'
@@ -127,9 +144,13 @@ def loadWorldBankData():
         .set_index('Year')
     )
         
-    
-    #WorldBankData.drop(index=WorldBankData.index[1], axis=0, inplace=True)
     return WorldBankData
+
+
+
+
+
+#                 Section 3 - On-demand Wrangling Functions    #
 
 def loadAll():
     #Loading individual datasets
@@ -156,9 +177,16 @@ def limitYears(aDF, backXYears):
     #PresupposesDF is already sorted
     return aDF.iloc[:, aDF.shape[1]-backXYears:aDF.shape[1]-1]
 
+
+
+
+
+
+#                 Section 4 - Statistical Analysis Functions   #
+
 #Stat Printing Table
 def printStatTableByDecade(aDF, areaOfInterest):
-    #This function prints a statistical table
+    #This function prints a statistical table including mean, min, max
     #Establishing column name list for various decades
     The80s = [col for col in aDF.columns if '198' in col]
     The90s = [col for col in aDF.columns if '199' in col]
@@ -179,6 +207,13 @@ def printStatTableByDecade(aDF, areaOfInterest):
     print("Decade | Mean\t |  Min   |  Max |")
     for key in statData.keys():
         print(key + "    | " + str(round(statData[key][0],3)) + "\t | " + str(round(statData[key][1],3)) + "\t | " + str(round(statData[key][2],3)) + " |")
+
+
+
+
+
+
+#                Section 5 - Graphing functions               #
 
 #Performs a relational plot over a specific period of time from current date.
 #Passable arguments are a dataframe to plot from, what column to plot, how many years to plot backwards from current date, size in x and y directions.
