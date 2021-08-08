@@ -278,26 +278,33 @@ def multiScatterPlot(aDF, locations, color, title):
 #Passable arguments are a dataframe to plot from, what columns to plot, of the overall plot title.
 def sideBySideScatterPlot(aDF,columns, title):
     fig, axs = plt.subplots(ncols=len(columns))
-    plt.title(title,size=20)
     fig.set_figwidth(30)
     fig.set_figheight(15)
+    plt.title(title,size=20)
     for location in range(len(columns)):
         sns.scatterplot(y=aDF[columns[location-1]],x=aDF.index,data=aDF,ax=axs[location-1])
 
 #Normalizes columns from values of 0 to 1 and then produces heatmap for comparison.
-#Passable arguments are a dataframe to plot from, what columns to plot, of the overall plot title.
-def normalizedHeatMap(aDF, columns, years):
+#Passable arguments are a dataframe to plot from, what columns to plot, and years to plot over.
+def normalizedHeatMap(aDF, columns, years, title):
     a=[]
     #Normalizing values between 0 to 1 for heatmap comparison by dividing individual entry by max entry in column.
     for aCol in columns:
-        a.append(limitYears(aDF,30).loc[aCol].transpose() / limitYears(aDF,30).loc[aCol].transpose().max())
-    sns.heatmap(pd.DataFrame(a, dtype="float"))
+        a.append(limitYears(aDF,years).loc[aCol].transpose() / limitYears(aDF,years).loc[aCol].transpose().max())
 
-#Supports n columns, divides col 1 by col i. Normalizes columns from values of 0 to 1 and then produces heatmap for comparison.
+    f, ax = plt.subplots()
+    plt.title(title,size=20)
+    ax = sns.heatmap(pd.DataFrame(a, dtype="float"))
+
+#Normalizes columns from values of 0 to 1 and then produces heatmap for comparison.
 #Passable arguments are a dataframe to plot from, what columns to plot, of the overall plot title.
-def relativeNormHeatMap(aDF, columns, years):
+def normalizedHeatMap2(aDF, columns, title):
     a=[]
     #Normalizing values between 0 to 1 for heatmap comparison by dividing individual entry by max entry in column.
     for aCol in columns:
-        a.append(limitYears(aDF,30).loc[aCol].transpose() / limitYears(aDF,30).loc[aCol].transpose().max())
-    sns.heatmap(pd.DataFrame(a, dtype="float"))
+        a.append(aDF[aCol] / aDF[aCol].max())
+
+    f, ax = plt.subplots()
+    plt.title(title,size=20)
+    ax = sns.heatmap(pd.DataFrame(a, dtype="float"),xticklabels=False)
+    
