@@ -274,6 +274,8 @@ def multiScatterPlot(aDF, locations, color, title):
 
     plt.show()
 
+#Performs a side by side scatter plot over a specific period of time from current date to compare passed columns.
+#Passable arguments are a dataframe to plot from, what columns to plot, of the overall plot title.
 def sideBySideScatterPlot(aDF,columns, title):
     fig, axs = plt.subplots(ncols=len(columns))
     plt.title(title,size=20)
@@ -281,3 +283,21 @@ def sideBySideScatterPlot(aDF,columns, title):
     fig.set_figheight(15)
     for location in range(len(columns)):
         sns.scatterplot(y=aDF[columns[location-1]],x=aDF.index,data=aDF,ax=axs[location-1])
+
+#Normalizes columns from values of 0 to 1 and then produces heatmap for comparison.
+#Passable arguments are a dataframe to plot from, what columns to plot, of the overall plot title.
+def normalizedHeatMap(aDF, columns, years):
+    a=[]
+    #Normalizing values between 0 to 1 for heatmap comparison by dividing individual entry by max entry in column.
+    for aCol in columns:
+        a.append(limitYears(aDF,30).loc[aCol].transpose() / limitYears(aDF,30).loc[aCol].transpose().max())
+    sns.heatmap(pd.DataFrame(a, dtype="float"))
+
+#Supports n columns, divides col 1 by col i. Normalizes columns from values of 0 to 1 and then produces heatmap for comparison.
+#Passable arguments are a dataframe to plot from, what columns to plot, of the overall plot title.
+def relativeNormHeatMap(aDF, columns, years):
+    a=[]
+    #Normalizing values between 0 to 1 for heatmap comparison by dividing individual entry by max entry in column.
+    for aCol in columns:
+        a.append(limitYears(aDF,30).loc[aCol].transpose() / limitYears(aDF,30).loc[aCol].transpose().max())
+    sns.heatmap(pd.DataFrame(a, dtype="float"))
