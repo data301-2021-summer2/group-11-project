@@ -1,0 +1,1949 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20212.21.0712.0907                               -->
+<workbook original-version='18.1' source-build='2021.2.1 (20212.21.0712.0907)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <_.fcp.MarkAnimation.true...style-rule element='animation'>
+      <format attr='animation-duration' value='0.10000000149011612' />
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.MarkAnimation.true...style-rule>
+  </style>
+  <datasources>
+    <datasource caption='MLSHPIDataCleaned' inline='true' name='federated.17ltr8n1czyewo131otkx13ytmu5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='MLSHPIDataCleaned' name='textscan.0iv01x40coixd117860eo1838wtv'>
+            <connection class='textscan' directory='C:/Users/Wesley/Documents/github/data301/group-11-project/data/processed' filename='MLSHPIDataCleaned.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0iv01x40coixd117860eo1838wtv' name='MLSHPIDataCleaned.csv' table='[MLSHPIDataCleaned#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='Date' ordinal='0' />
+            <column datatype='integer' name='Vancouver One Storey Home' ordinal='1' />
+            <column datatype='integer' name='Vancouver Two Storey Home' ordinal='2' />
+            <column datatype='integer' name='Vancouver Townhouse' ordinal='3' />
+            <column datatype='integer' name='Vancouver Apartment' ordinal='4' />
+            <column datatype='integer' name='Kelowna One Storey Home' ordinal='5' />
+            <column datatype='integer' name='Kelowna Two Storey Home' ordinal='6' />
+            <column datatype='integer' name='Kelowna Townhouse' ordinal='7' />
+            <column datatype='integer' name='Kelowna Apartment' ordinal='8' />
+            <column datatype='integer' name='Canada One Storey Home' ordinal='9' />
+            <column datatype='integer' name='Canada Two Storey Home' ordinal='10' />
+            <column datatype='integer' name='Canada Townhouse' ordinal='11' />
+            <column datatype='integer' name='Canada Apartment' ordinal='12' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0iv01x40coixd117860eo1838wtv' name='MLSHPIDataCleaned.csv' table='[MLSHPIDataCleaned#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='Date' ordinal='0' />
+            <column datatype='integer' name='Vancouver One Storey Home' ordinal='1' />
+            <column datatype='integer' name='Vancouver Two Storey Home' ordinal='2' />
+            <column datatype='integer' name='Vancouver Townhouse' ordinal='3' />
+            <column datatype='integer' name='Vancouver Apartment' ordinal='4' />
+            <column datatype='integer' name='Kelowna One Storey Home' ordinal='5' />
+            <column datatype='integer' name='Kelowna Two Storey Home' ordinal='6' />
+            <column datatype='integer' name='Kelowna Townhouse' ordinal='7' />
+            <column datatype='integer' name='Kelowna Apartment' ordinal='8' />
+            <column datatype='integer' name='Canada One Storey Home' ordinal='9' />
+            <column datatype='integer' name='Canada Two Storey Home' ordinal='10' />
+            <column datatype='integer' name='Canada Townhouse' ordinal='11' />
+            <column datatype='integer' name='Canada Apartment' ordinal='12' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vancouver One Storey Home</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Vancouver One Storey Home]</local-name>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias>Vancouver One Storey Home</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vancouver Two Storey Home</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Vancouver Two Storey Home]</local-name>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias>Vancouver Two Storey Home</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vancouver Townhouse</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Vancouver Townhouse]</local-name>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias>Vancouver Townhouse</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vancouver Apartment</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Vancouver Apartment]</local-name>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias>Vancouver Apartment</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Kelowna One Storey Home</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Kelowna One Storey Home]</local-name>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias>Kelowna One Storey Home</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Kelowna Two Storey Home</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Kelowna Two Storey Home]</local-name>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias>Kelowna Two Storey Home</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Kelowna Townhouse</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Kelowna Townhouse]</local-name>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias>Kelowna Townhouse</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Kelowna Apartment</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Kelowna Apartment]</local-name>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias>Kelowna Apartment</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Canada One Storey Home</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Canada One Storey Home]</local-name>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias>Canada One Storey Home</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Canada Two Storey Home</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Canada Two Storey Home]</local-name>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias>Canada Two Storey Home</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Canada Townhouse</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Canada Townhouse]</local-name>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias>Canada Townhouse</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Canada Apartment</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Canada Apartment]</local-name>
+            <parent-name>[MLSHPIDataCleaned.csv]</parent-name>
+            <remote-alias>Canada Apartment</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Max_Kelowna' datatype='integer' name='[Calculation_997828796996608002]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MAX([Kelowna Two Storey Home])' />
+      </column>
+      <column caption='Max_Canada' datatype='integer' name='[Calculation_997828796997058563]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MAX([Canada Two Storey Home])' />
+      </column>
+      <column caption='Max_Vanc' datatype='integer' name='[Calculation_997828796997128196]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MAX([Vancouver Two Storey Home])' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Canada Apartment]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Canada One Storey Home]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Canada Townhouse]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Canada Two Storey Home]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Kelowna Apartment]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Kelowna One Storey Home]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Kelowna Townhouse]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Kelowna Two Storey Home]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Vancouver Apartment]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Vancouver One Storey Home]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Vancouver Townhouse]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Vancouver Two Storey Home]' role='dimension' type='ordinal' />
+      <_.fcp.ObjectModelTableType.true...column caption='MLSHPIDataCleaned.csv' datatype='table' name='[__tableau_internal_object_id__].[MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B]' role='measure' type='quantitative' />
+      <drill-paths>
+        <drill-path name='Area'>
+          <field>[Canada Apartment]</field>
+          <field>[Canada One Storey Home]</field>
+          <field>[Canada Townhouse]</field>
+          <field>[Canada Two Storey Home]</field>
+          <field>[Kelowna Apartment]</field>
+          <field>[Kelowna One Storey Home]</field>
+          <field>[Kelowna Townhouse]</field>
+          <field>[Kelowna Two Storey Home]</field>
+          <field>[Vancouver Apartment]</field>
+          <field>[Vancouver One Storey Home]</field>
+          <field>[Vancouver Townhouse]</field>
+          <field>[Vancouver Two Storey Home]</field>
+        </drill-path>
+      </drill-paths>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='MLSHPIDataCleaned.csv' id='MLSHPIDataCleaned.csv_B4984210FF3547A7ADD62D2FED8AB57B'>
+            <properties context=''>
+              <relation connection='textscan.0iv01x40coixd117860eo1838wtv' name='MLSHPIDataCleaned.csv' table='[MLSHPIDataCleaned#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='Date' ordinal='0' />
+                  <column datatype='integer' name='Vancouver One Storey Home' ordinal='1' />
+                  <column datatype='integer' name='Vancouver Two Storey Home' ordinal='2' />
+                  <column datatype='integer' name='Vancouver Townhouse' ordinal='3' />
+                  <column datatype='integer' name='Vancouver Apartment' ordinal='4' />
+                  <column datatype='integer' name='Kelowna One Storey Home' ordinal='5' />
+                  <column datatype='integer' name='Kelowna Two Storey Home' ordinal='6' />
+                  <column datatype='integer' name='Kelowna Townhouse' ordinal='7' />
+                  <column datatype='integer' name='Kelowna Apartment' ordinal='8' />
+                  <column datatype='integer' name='Canada One Storey Home' ordinal='9' />
+                  <column datatype='integer' name='Canada Two Storey Home' ordinal='10' />
+                  <column datatype='integer' name='Canada Townhouse' ordinal='11' />
+                  <column datatype='integer' name='Canada Apartment' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Average Sale Price by Dwelling Type in Canada'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MLSHPIDataCleaned' name='federated.17ltr8n1czyewo131otkx13ytmu5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17ltr8n1czyewo131otkx13ytmu5'>
+            <column caption='Max_Canada' datatype='integer' name='[Calculation_997828796997058563]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MAX([Canada Two Storey Home])' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[Canada Apartment]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Canada One Storey Home]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Canada Townhouse]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Canada Two Storey Home]' role='dimension' type='ordinal' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Vancouver Apartment]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Vancouver One Storey Home]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Vancouver Townhouse]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Vancouver Two Storey Home]' role='dimension' type='ordinal' />
+            <column-instance column='[Canada Townhouse]' derivation='Max' name='[max:Canada Townhouse:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Apartment]' derivation='Max' name='[max:Vancouver Apartment:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver One Storey Home]' derivation='Max' name='[max:Vancouver One Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Townhouse]' derivation='Max' name='[max:Vancouver Townhouse:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Two Storey Home]' derivation='Max' name='[max:Vancouver Two Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Canada Apartment]' derivation='None' name='[none:Canada Apartment:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Canada One Storey Home]' derivation='None' name='[none:Canada One Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Canada Townhouse]' derivation='None' name='[none:Canada Townhouse:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Canada Two Storey Home]' derivation='None' name='[none:Canada Two Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Apartment]' derivation='Sum' name='[sum:Vancouver Apartment:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver One Storey Home]' derivation='Sum' name='[sum:Vancouver One Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Townhouse]' derivation='Sum' name='[sum:Vancouver Townhouse:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Two Storey Home]' derivation='Sum' name='[sum:Vancouver Two Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Quarter-Trunc' name='[tqr:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_997828796997058563]' derivation='User' name='[usr:Calculation_997828796997058563:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Apartment:qk]' value='45' />
+            <format attr='height' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada One Storey Home:qk]' value='45' />
+            <format attr='height' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Townhouse:qk]' value='45' />
+            <format attr='height' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Two Storey Home:qk]' value='45' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' value='64' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Vancouver Two Storey Home:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Vancouver Townhouse:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Vancouver One Storey Home:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Vancouver Apartment:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[max:Vancouver Apartment:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[max:Canada Townhouse:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f2dada</color>
+                <color>#f3c3c3</color>
+                <color>#f5abab</color>
+                <color>#f69393</color>
+                <color>#f87c7c</color>
+                <color>#f96363</color>
+                <color>#fa4b4b</color>
+                <color>#fc3232</color>
+                <color>#fd1919</color>
+                <color>#ff0000</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[max:Vancouver One Storey Home:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[max:Vancouver Townhouse:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[max:Vancouver Two Storey Home:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997058563:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f2dada</color>
+                <color>#f3c3c3</color>
+                <color>#f5abab</color>
+                <color>#f69393</color>
+                <color>#f87c7c</color>
+                <color>#f96363</color>
+                <color>#fa4b4b</color>
+                <color>#fc3232</color>
+                <color>#fd1919</color>
+                <color>#ff0000</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='17' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997058563:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='18' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Apartment:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997058563:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.77961325645446777' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='19' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada One Storey Home:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997058563:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.77961325645446777' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='20' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Townhouse:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997058563:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.77961325645446777' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='21' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Two Storey Home:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997058563:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.77961325645446777' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows include-empty='true' />
+        <cols>([federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Apartment:qk] + ([federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Townhouse:qk] + ([federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada One Storey Home:qk] + [federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Two Storey Home:qk])))</cols>
+        <pages>
+          <column>[federated.17ltr8n1czyewo131otkx13ytmu5].[tqr:Date:ok]</column>
+        </pages>
+        <page-trail-options mark-color='#b07aa1' mark-color-auto='false' start='46' trail-effect='none' />
+      </table>
+      <simple-id uuid='{332EDB6C-884C-4BBC-8694-BC5DB2E202BF}' />
+    </worksheet>
+    <worksheet name='Average Sale Price by Dwelling Type in Kelowna'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MLSHPIDataCleaned' name='federated.17ltr8n1czyewo131otkx13ytmu5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17ltr8n1czyewo131otkx13ytmu5'>
+            <column caption='Max_Kelowna' datatype='integer' name='[Calculation_997828796996608002]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MAX([Kelowna Two Storey Home])' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Kelowna Apartment]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Kelowna One Storey Home]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Kelowna Townhouse]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Kelowna Two Storey Home]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Vancouver Apartment]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Vancouver One Storey Home]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Vancouver Townhouse]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Vancouver Two Storey Home]' role='dimension' type='ordinal' />
+            <column-instance column='[Vancouver Apartment]' derivation='Max' name='[max:Vancouver Apartment:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver One Storey Home]' derivation='Max' name='[max:Vancouver One Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Townhouse]' derivation='Max' name='[max:Vancouver Townhouse:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Two Storey Home]' derivation='Max' name='[max:Vancouver Two Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Kelowna Apartment]' derivation='None' name='[none:Kelowna Apartment:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Kelowna One Storey Home]' derivation='None' name='[none:Kelowna One Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Kelowna Townhouse]' derivation='None' name='[none:Kelowna Townhouse:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Kelowna Two Storey Home]' derivation='None' name='[none:Kelowna Two Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Apartment]' derivation='Sum' name='[sum:Vancouver Apartment:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver One Storey Home]' derivation='Sum' name='[sum:Vancouver One Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Townhouse]' derivation='Sum' name='[sum:Vancouver Townhouse:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Two Storey Home]' derivation='Sum' name='[sum:Vancouver Two Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Quarter-Trunc' name='[tqr:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_997828796996608002]' derivation='User' name='[usr:Calculation_997828796996608002:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='64' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Vancouver Two Storey Home:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Vancouver Townhouse:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Vancouver One Storey Home:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Vancouver Apartment:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[max:Vancouver Apartment:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[max:Vancouver One Storey Home:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[max:Vancouver Townhouse:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[max:Vancouver Two Storey Home:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796996608002:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d6dee6</color>
+                <color>#bdccdb</color>
+                <color>#a5bbd0</color>
+                <color>#8faac5</color>
+                <color>#7a9aba</color>
+                <color>#678baf</color>
+                <color>#567da4</color>
+                <color>#456f99</color>
+                <color>#37638e</color>
+                <color>#2a5783</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='22' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796996608002:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='23' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Kelowna Apartment:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796996608002:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='24' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Kelowna Townhouse:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796996608002:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='25' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Kelowna One Storey Home:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796996608002:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='26' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Kelowna Two Storey Home:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796996608002:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows include-empty='true' />
+        <cols>([federated.17ltr8n1czyewo131otkx13ytmu5].[none:Kelowna Apartment:qk] + ([federated.17ltr8n1czyewo131otkx13ytmu5].[none:Kelowna Townhouse:qk] + ([federated.17ltr8n1czyewo131otkx13ytmu5].[none:Kelowna One Storey Home:qk] + [federated.17ltr8n1czyewo131otkx13ytmu5].[none:Kelowna Two Storey Home:qk])))</cols>
+        <pages>
+          <column>[federated.17ltr8n1czyewo131otkx13ytmu5].[tqr:Date:ok]</column>
+        </pages>
+        <page-trail-options mark-color-auto='false' mark-type='all' size='5' start='46' trail-effect='none' />
+      </table>
+      <simple-id uuid='{AF57FE9A-8630-4040-95A1-A1ED4645A367}' />
+    </worksheet>
+    <worksheet name='Average Sale Price by Dwelling Type in Vancouver'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MLSHPIDataCleaned' name='federated.17ltr8n1czyewo131otkx13ytmu5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17ltr8n1czyewo131otkx13ytmu5'>
+            <column caption='Max_Vanc' datatype='integer' name='[Calculation_997828796997128196]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MAX([Vancouver Two Storey Home])' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Vancouver Apartment]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Vancouver One Storey Home]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Vancouver Townhouse]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Vancouver Two Storey Home]' role='dimension' type='ordinal' />
+            <column-instance column='[Vancouver One Storey Home]' derivation='Max' name='[max:Vancouver One Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Townhouse]' derivation='Max' name='[max:Vancouver Townhouse:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Two Storey Home]' derivation='Max' name='[max:Vancouver Two Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Apartment]' derivation='None' name='[none:Vancouver Apartment:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver One Storey Home]' derivation='None' name='[none:Vancouver One Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Townhouse]' derivation='None' name='[none:Vancouver Townhouse:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Two Storey Home]' derivation='None' name='[none:Vancouver Two Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver One Storey Home]' derivation='Sum' name='[sum:Vancouver One Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Townhouse]' derivation='Sum' name='[sum:Vancouver Townhouse:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Vancouver Two Storey Home]' derivation='Sum' name='[sum:Vancouver Two Storey Home:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Quarter-Trunc' name='[tqr:Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_997828796997128196]' derivation='User' name='[usr:Calculation_997828796997128196:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='64' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Vancouver Two Storey Home:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Vancouver Townhouse:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Vancouver One Storey Home:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[max:Vancouver One Storey Home:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[max:Vancouver Townhouse:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[max:Vancouver Two Storey Home:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997128196:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d2e9d2</color>
+                <color>#b5e2b5</color>
+                <color>#99db99</color>
+                <color>#7fd47f</color>
+                <color>#66cd66</color>
+                <color>#4fc64f</color>
+                <color>#39bf39</color>
+                <color>#24b824</color>
+                <color>#11b111</color>
+                <color>#00aa00</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='26' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997128196:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='27' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Vancouver Apartment:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997128196:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='28' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Vancouver One Storey Home:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997128196:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='29' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Vancouver Townhouse:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997128196:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='30' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Vancouver Two Storey Home:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997128196:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='211' />
+                <format attr='maxwidth' value='211' />
+                <format attr='minheight' value='20' />
+                <format attr='maxheight' value='20' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows include-empty='true' />
+        <cols>([federated.17ltr8n1czyewo131otkx13ytmu5].[none:Vancouver Apartment:qk] + ([federated.17ltr8n1czyewo131otkx13ytmu5].[none:Vancouver One Storey Home:qk] + ([federated.17ltr8n1czyewo131otkx13ytmu5].[none:Vancouver Townhouse:qk] + [federated.17ltr8n1czyewo131otkx13ytmu5].[none:Vancouver Two Storey Home:qk])))</cols>
+        <pages>
+          <column>[federated.17ltr8n1czyewo131otkx13ytmu5].[tqr:Date:ok]</column>
+        </pages>
+        <page-trail-options mark-color-auto='false' mark-type='all' size='5' start='46' trail-effect='none' />
+      </table>
+      <simple-id uuid='{7CC58909-6126-4AFB-AD36-35AFFD9F4610}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Growing Prices Animation by Quarter'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type-v2='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='34625' id='3' name='Average Sale Price by Dwelling Type in Canada' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='34000' id='10' name='Average Sale Price by Dwelling Type in Kelowna' w='82400' x='800' y='35625'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='29375' id='13' name='Average Sale Price by Dwelling Type in Vancouver' w='82400' x='800' y='69625'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
+              <zone count='2' h='13750' id='12' name='Average Sale Price by Dwelling Type in Kelowna' name1='Average Sale Price by Dwelling Type in Canada' name2='Average Sale Price by Dwelling Type in Vancouver' synchronized='1' type-v2='currpage' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8125' id='8' name='Average Sale Price by Dwelling Type in Canada' pane-specification-id='18' param='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997058563:qk]' type-v2='color' w='16000' x='83200' y='14750'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8125' id='11' name='Average Sale Price by Dwelling Type in Kelowna' pane-specification-id='23' param='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796996608002:qk]' type-v2='color' w='16000' x='83200' y='22875'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8125' id='14' name='Average Sale Price by Dwelling Type in Vancouver' pane-specification-id='27' param='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997128196:qk]' type-v2='color' w='16000' x='83200' y='31000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1100' minheight='1100' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='22' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='21' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='269' h='34625' id='3' is-fixed='true' name='Average Sale Price by Dwelling Type in Canada' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8125' id='8' name='Average Sale Price by Dwelling Type in Canada' pane-specification-id='18' param='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997058563:qk]' type-v2='color' w='16000' x='83200' y='14750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='264' h='34000' id='10' is-fixed='true' name='Average Sale Price by Dwelling Type in Kelowna' w='82400' x='800' y='35625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8125' id='11' name='Average Sale Price by Dwelling Type in Kelowna' pane-specification-id='23' param='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796996608002:qk]' type-v2='color' w='16000' x='83200' y='22875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='227' h='29375' id='13' is-fixed='true' name='Average Sale Price by Dwelling Type in Vancouver' w='82400' x='800' y='69625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8125' id='14' name='Average Sale Price by Dwelling Type in Vancouver' pane-specification-id='27' param='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997128196:qk]' type-v2='color' w='16000' x='83200' y='31000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone count='2' h='13750' id='12' name='Average Sale Price by Dwelling Type in Kelowna' name1='Average Sale Price by Dwelling Type in Canada' name2='Average Sale Price by Dwelling Type in Vancouver' synchronized='1' type-v2='currpage' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{1DA7C24E-0A2B-4577-A97A-51D0D3EA5ED4}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Average Sale Price by Dwelling Type in Canada'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+            <card pane-specification-id='18' param='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997058563:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2021-04-01 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[mn:Date:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Apartment:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada One Storey Home:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada One Storey Home:qk]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Townhouse:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Two Storey Home:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Date:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Date:qk]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Vancouver Two Storey Home:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Canada One Storey Home:qk]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Canada Two Storey Home:qk]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F2A7E06B-05C7-48F9-A9A2-03AC8233BCBC}' />
+    </window>
+    <window class='worksheet' name='Average Sale Price by Dwelling Type in Kelowna'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+            <card pane-specification-id='23' param='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796996608002:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2017-01-01 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[mn:Date:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Apartment:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada One Storey Home:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Townhouse:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Two Storey Home:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Date:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Date:qk]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Kelowna Apartment:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Kelowna One Storey Home:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Vancouver Two Storey Home:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Canada One Storey Home:qk]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Canada Two Storey Home:qk]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{EC85657A-EAA7-442F-AAC1-C25F33CB4683}' />
+    </window>
+    <window class='worksheet' name='Average Sale Price by Dwelling Type in Vancouver'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+            <card pane-specification-id='27' param='[federated.17ltr8n1czyewo131otkx13ytmu5].[usr:Calculation_997828796997128196:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2012-01-01 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[mn:Date:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Apartment:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada One Storey Home:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Townhouse:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Canada Two Storey Home:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Date:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Date:qk]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Kelowna Apartment:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Kelowna One Storey Home:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[none:Vancouver Two Storey Home:ok]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Canada One Storey Home:qk]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[sum:Canada Two Storey Home:qk]</field>
+            <field>[federated.17ltr8n1czyewo131otkx13ytmu5].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{9A6490B6-814E-4805-B5AE-AEDD9F84008B}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Growing Prices Animation by Quarter'>
+      <viewpoints>
+        <viewpoint name='Average Sale Price by Dwelling Type in Canada'>
+          <current-page>
+            <multibucket>
+              <bucket>#2021-04-01 00:00:00#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Average Sale Price by Dwelling Type in Kelowna'>
+          <current-page>
+            <multibucket>
+              <bucket>#2021-04-01 00:00:00#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Average Sale Price by Dwelling Type in Vancouver'>
+          <current-page>
+            <multibucket>
+              <bucket>#2021-04-01 00:00:00#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{140AFFF4-7D27-4355-81D5-6712E7FE8E8A}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Average Sale Price by Dwelling Type in Canada' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFQUlEQVR4nO3dz2sUZxzH8c8zO7sbJ7sag548eBGLtVptgzZtD3oReuzBv7NeSvEgFMFL
+      oUihVEMVbbExDfEXu0YnO888PSy2DRZSdkZN/LxfENgks9/9zmzeu3tLSCklAaZySaIBuMpf
+      3VhfX1dRFK8dEGNUp9Np7QF3+7yUklJKyrKs0ZzJZCJJ6na7jXes61ohBIUQZp7RdIc27p9l
+      WaNzGI1GKoqi1fP4O4CiKDQcDrcdnFJSjFF5nqstVVXt6nl1XUtS4wDKspQk9fv9xjvGGBVC
+      aLRT0x3aOIemAVRVpcFg0Op5NHuWgT2OAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCN
+      AGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCN
+      AGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCN
+      AGCNAGCNAGCNAGCNAGCNAGCNAGCNAGCNAGAtf3UjXb+uVJavHRDqWilrr5PdPk8pTb9CkC5d
+      kobD2WddvapUVY13DClNVwth9hlNd2h6nWOUDh+WLlyYfcbGhsK1a62eR0hTGp0/r+HNm7Mv
+      9z6pKgVJWlmRjh+faURZlkrHjqm/ttbqantWjArLy9KNGzOPeHLlihYuX25xKT4CwRwBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwFq+8yHeno+eavyy1v75
+      nrpz83qx+VzDwUDPx2P1+rlG4y0V/aCtOtf+wb53ve6e8HJzpBdVJk02NVg4pGeP/tSBxUMq
+      yy31sqTNSuqmidQrND/Xe6O7EMAOfvrxBy0c+UCPH65q8cjHWrn1sz4/d1rfffOtjp4+ppdP
+      XyjflyvGTF8un3vX6+4JN65/r6MnPtTq3VWFONJG1dcXS2f0YHVNYTLWuEzqhYlSb16fLX3y
+      RnfhI9AO9vW7+uX2ip4+2tCde/e08fA33b2/plOnPlLR66qMtXpZUh14Lfm/slTp9p37mmxt
+      qjhwSM/W7un3P9b1661bSgqKyhRSpSyfe+O78Kzt4OzyRZ399w+WTm77/ckTb3Wd98LFr77e
+      9v2n56bvnEtn3v7F5B0A1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA1ggA
+      1ggA1ggA1ggA1kKa0vjBAw36/dcOqGNU1um09oAxRnV28byUkpSSsiyTFhelfLZ/o1aWpfT4
+      sXqdTuMdU11LISiEMPOMpjs0vX8do7K5OYWDB2ee8WR9XcOWz+OfZ3dhQWE43HZwSkkpRoUZ
+      /wj+U1Xt6nmprqc3shbeHBcXFfr9xjvWMSqEoNBkp6bXqen9Y2x+Tbvd6TVt8Tz4CARrBABr
+      BABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABr
+      BABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABr
+      BABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrfwGp
+      0WMx4ou/SQAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Average Sale Price by Dwelling Type in Kelowna' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFuElEQVR4nO3cXVMTZxyG8Xs3CcnExIKv+IKoU1twoDK0PbEzPXCm05N+hX7D9gN0pnXG
+      9syTts4oWsTa+oaAChJCQ7L79ABllFGbxA2B3tfvhED2efafZa6QEzYKIQQBpvKSRANwlX/5
+      YGFhQeVyWUmSKJfLtb1Br48PISiEoDiOd81M7axpNpuSpEKh0NG+3Z6vU2maKooiRVGU2Z5Z
+      z7h9z3q9rnK5nOn5twIol8uqVCpKkkT5fP5da17TarV6enwIQWmadvTCej1TO2sajYYkqVgs
+      drRvt+frVJIkiuM40wCynvFNe1ar1UzP3/7bKvA/RACwRgCwRgCwRgCwRgCwRgCwRgCwRgCw
+      RgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwtvUv9PcXV5RfaShJUuVyndyC
+      pLfHp6m0r5TXySODba/ZLe7OP1Ocy+YuCZ1et1e96bZPaZrqwP6yjgxV3nOynVP/p6n5laW3
+      Pt/NNdr67fxwdVZP1pLup+uBEKQ0DRofPaxvv57q9zgd+/7Kda03+3/Tse0BpOnmDy5OnNI3
+      Fz/uw0TdmX+2qu9+mc10Tz4CwRoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoBwBoB
+      wBoBwFq+3wO0a215Uddu/a1zp4f1eGVDlXhdG4VBqbao6tER3b9zR2PjH+rm7Xu6MDne73H3
+      lLt3buvA0KDm7i3qUCXW86Sg9aUHKg4dU7L6VGfHz+vmzC1NfzqtfBz1e9xM7Zm/AIVSSauP
+      H+qP+0+1sf5c+wcPau3JI/12Y0ZLf91S9ciwLv98VcOVVPO1tN/j7hmNtWX9fn1GN+ceaCDf
+      VBrl9OjRgiYnziuqLWrg6Iiu/PiTRg6WNLdY7/e4mdszAawuLysqlXSgklejGen6tV+lUlWn
+      TxyXih/owdysLkyc0+zDmg6V98zL6rt4oKzPp6d07HBVS88aWl+rqVgc0NLKusYuTGnp9owm
+      p6d0488FnRgq9XvczO2Zj0AHh0f01fDIKz/55MXXjza/TJyXJI2OnlGr1drR2fayQmFAx09s
+      XteR0bOSpLFXnv/y0iVJ0ulTozs92o7grRLWCADWCADWCADWCADWCADWCADWCADWCADWCADW
+      CADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADW
+      CADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADW
+      CADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADW
+      CADWCADWCADWCADW8i8fTJ4dVlM5hTQoiqO2N+jp8UEKQTo8WG57/93ks7GTStX+tXmXTq/z
+      64u3fRukNASdOTb0/oPtoMF9JX0xeeqtz3dzjaKwSbVaTZVKRUmSKJ/P//fKF1qtVk+PDyEo
+      TVPlcrldM1M7axqNhiSpWCx2tG+35+tUkiSK41hRlE2gUvYzbt9zdXVV1Wo10/PzEQjWCADW
+      CADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADWCADW
+      CADWCADWtu4hUa/XFUJQCEFx3H4XaZr29PjdOFM7a5rNpiRpY2Ojo327PV83+0VRlOltUbKe
+      cfue9Xo98/P/Cx0Snz06lUZhAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Average Sale Price by Dwelling Type in Vancouver' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFk0lEQVR4nO3c208cZRzG8WcOnBamB6rSphIIFltpMabxygs1Nt5V/Uv6D3LbmJjYGJvU
+      RKvpSVoIh6YCXVh25329aMA2jRlmy3J6vp+rDcz7zm+H/S7LBZPEGKMAU7kk0QBc5TsPlpaW
+      1Gg0KheUZaksy2qdJMaoGKPSNK21rptzHfS6EIIkvfXc2u327tfr7ll3jm7mrrsmhKAkSZQk
+      yaHN1Ww21Wg0au1bdexuAI1GQ0VRVG7Y6XSU53nlca+LMSqEUPtidHOug173fwG0Wi1JUpZl
+      tfesO0c3c9ddU5al0jStFUAv5iqKota+VcfWe0sGThgCgDUCgDUCgDUCgDUCgDUCgDUCgDUC
+      gDUCgDUCgDUCgDUCgDUCgDUCgDUCgDUCgDUCgDUCgDUCgDUCgLXdf5df3FrUarpauSCUQWm2
+      t24SJZoYnuh+umNufnNeSZrs+XrtqLrGRV7o3MC5dx3v2Nkqt7T6crXWa7Dq2N0Abi/f1lq+
+      9u5TviZLMt2avrWvex4nc4tzaqWtfd939vSsbozd2Pd9j7rl1rLmlub2dU8+AsEaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAa
+      AcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcAaAcBa3usThLCtOz/9rImPLunhoyeaHB/T
+      /PKGGvGl1sOQzvR3NHpxSk8f/K7pa9c1PNDzkU6E3+7e0UbZr9N9HWVDp7Tw5LE+nJ5REoPO
+      DiWaf76l0cFSW+kpTY2PHfa4R1bPfwMkSaZcpf64d09LS0/VLHM9W1jQlWufqpEHbaf9enjv
+      R/WPnNeDR497Pc6JMXP1moYHBzR67n1tl9LU5LhGRoa1+XJDfy+uKNlc07MXW1p7vnDYox5p
+      PQ8gtDa11mrr1JmzGhhoaHP9Hw0ODGh5ZVUfX/lErRcrGh2f0crT+xr74HyvxzkxVldWNTU9
+      qbu//Ko071fsG9JgbOqv+3+qL8+01kk0km4r6Rs57FGPtJ5/3sgGR/TV198ohKDPskySdHXm
+      v+9//sWXkqRLkxO9HuVEee/8RUnStze/U6fTUZ6/+lF+/8PNwxzr2OGPYFgjAFgjAFgjAFgj
+      AFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgj
+      AFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgj
+      AFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgj
+      AFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFjLdx5cLi6rHCwrF8QQlaTJnjZPzfuaPT2r
+      Mi33fL12VF3jC4MX3nW0Y6nIC10/e73Wa7Dq2CS+oo2NDRVFUblhp9NRnueVx70xRIwKISjL
+      slrrujnXQa8LIUiS0vTN2FutliQpy7Lae9ado5u5664py1JpmipJ9h7zfs+1vr6uoihq7Vt1
+      rPdbNOwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwRAKwR
+      AKwRAKwRAKwRAKwRAKzt3i+i2WzuaUEI4a1bgFSJMSrGWHtdN+c66HUxRkl663Yh7XZb0qvb
+      ovT6eXczdzfnSJKk1m1R9nuunddonX2rjv0XI8yPMXu0E2EAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Growing Prices Animation by Quarter' width='192'>
+      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
+      YII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
