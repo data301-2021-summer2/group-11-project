@@ -307,4 +307,3 @@ def normalizedHeatMap2(aDF, columns, title):
     f, ax = plt.subplots()
     plt.title(title,size=20)
     ax = sns.heatmap(pd.DataFrame(a, dtype="float"),xticklabels=False)
-    
